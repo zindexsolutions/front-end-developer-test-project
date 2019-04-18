@@ -4,7 +4,7 @@ Front-end Developer Test Project for Pixel2HTML
 Live URL: http://www.drcoders.com/html/module/
 
 ## In the project we did & Used
-1. Used Bootstrap 4.0
+1. Used Bootstrap 4.3.1
 2. 100% Responsive 
 3. For retina screen used SVG images
 4. Used CSS for colours etc 
