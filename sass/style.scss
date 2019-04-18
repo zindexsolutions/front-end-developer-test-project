@@ -85,9 +85,11 @@
           line-height: 16px;
           color: $text-color;
 
+          &.active,
           &:hover {
                color:$text-hover-color;
           }
+
      }      
 }
 

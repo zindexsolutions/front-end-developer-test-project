@@ -1,6 +1,11 @@
 // JavaScript Document
 
 $(document).ready(function() {
+
+	$.scrollIt({
+		topOffset: -120// offste (in px) for fixed top navigation
+	});
+
 	// home main slider start 
 	$('.creative-slider').slick({
 		dots: true,
@@ -14,6 +19,9 @@ $(document).ready(function() {
 	});
 	// home main slider end
 
+	$('.navbar-nav .nav-link').click(function(){
+		$('.navbar-collapse.collapse').removeClass('show');
+	});
 
 	// client slider start 
 	$('.client-slider').slick({
