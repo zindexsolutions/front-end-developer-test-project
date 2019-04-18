@@ -10,17 +10,13 @@
 
 .footer__right { text-align: center; padding: 15px 0 0; }
 .footer .selectbox .dropdown-menu { top: 6px !important; }
-.footer__left { padding: 0 0 30px; text-align: center;  }
-.footer__left a { position: relative ;}
+
 
 }
 
 @media (min-width: 576px) and (max-width: 767px){
-.container { max-width: 100%; width: 100%; }
 
-.footer .selectbox { margin-left: -15px; }
-.footer__left { padding-top: 15px !important; }
-.footer__left { padding: 0 0 30px 85px;  }
+.container { max-width: 100%; width: 100%; }
 
 }
 
@@ -138,7 +134,9 @@ p br { display: none; }
 .footer__links .block ul li { padding: 0 0 10px; }
 .footer__links .block .f-title { padding: 0 0 20px; }
 .footer__links .block { width: 100%; text-align: center; padding: 0 0 20px; }
-
+.footer__left { padding: 0 0 30px; text-align: center;  }
+.footer__left a { position: relative ;}
+.footer__right { text-align: center; }
 
 
 }

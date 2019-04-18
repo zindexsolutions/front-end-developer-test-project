@@ -169,7 +169,12 @@ a {
         margin-right: 5px; }
       .creatives .creative-slider__item--detail a svg {
         display: inline-block;
-        vertical-align: middle; }
+        vertical-align: middle;
+        fill: #358ED7; }
+      .creatives .creative-slider__item--detail a:hover {
+        color: #86939E; }
+        .creatives .creative-slider__item--detail a:hover svg {
+          fill: #86939E; }
     .creatives .creative-slider .slick-prev {
       display: none !important; }
     .creatives .creative-slider .slick-next {
@@ -191,6 +196,8 @@ a {
         margin: 0 5px;
         padding: 0;
         position: relative; }
+        .creatives .creative-slider .slick-dots li:first-child {
+          margin-left: 0; }
         .creatives .creative-slider .slick-dots li button {
           text-indent: -4000px;
           border: none;
@@ -355,6 +362,10 @@ a {
         color: #fff;
         background: #7DC855;
         border-color: transparent; }
+        .pricing-table__block.premium .btn-pre a:hover {
+          color: #fff;
+          background: #358ED7;
+          border-color: #358ED7; }
 
 .pricing-table-slider .slick-arrow {
   position: absolute;
@@ -530,7 +541,7 @@ a {
         padding: 6px 14px;
         text-align: center; }
         .footer .selectbox .dropdown-menu .dropdown-item:focus, .footer .selectbox .dropdown-menu .dropdown-item:hover {
-          background: transparent; }
+          background: #5E6977; }
       .footer .selectbox .dropdown-menu:after {
         content: "";
         display: block;
@@ -556,27 +567,11 @@ a {
     padding: 15px 0 0; }
 
   .footer .selectbox .dropdown-menu {
-    top: 6px !important; }
-
-  .footer__left {
-    padding: 0 0 30px;
-    text-align: center; }
-
-  .footer__left a {
-    position: relative; } }
+    top: 6px !important; } }
 @media (min-width: 576px) and (max-width: 767px) {
   .container {
     max-width: 100%;
-    width: 100%; }
-
-  .footer .selectbox {
-    margin-left: -15px; }
-
-  .footer__left {
-    padding-top: 15px !important; }
-
-  .footer__left {
-    padding: 0 0 30px 85px; } }
+    width: 100%; } }
 @media (max-width: 767px) {
   .header {
     padding: 15px 0;
@@ -834,7 +829,17 @@ a {
   .footer__links .block {
     width: 100%;
     text-align: center;
-    padding: 0 0 20px; } }
+    padding: 0 0 20px; }
+
+  .footer__left {
+    padding: 0 0 30px;
+    text-align: center; }
+
+  .footer__left a {
+    position: relative; }
+
+  .footer__right {
+    text-align: center; } }
 @media (min-width: 768px) {
   .header.fixed {
     position: fixed;

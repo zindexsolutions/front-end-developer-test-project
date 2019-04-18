@@ -225,16 +225,26 @@
                          text-decoration: none;
                          display: inline-block;
                          margin: 0 0 35px;
-
+                         
+                        
                          span {
                               display: inline-block;
                               vertical-align: middle;
                               margin-right: 5px;
                          }
-
+                         
                          svg {
                               display: inline-block;
                               vertical-align: middle;
+                              fill: $color-358ED7;
+                         }
+
+                         &:hover {
+                              color: $text-color;
+
+                              svg {
+                                   fill:$text-color;
+                              }
                          }
                     }
                }
@@ -266,6 +276,10 @@
                     margin: 0 5px;
                     padding: 0;
                     position: relative;
+
+                    &:first-child {
+                         margin-left: 0;
+                    }
 
                     button {
                          text-indent: -4000px;
@@ -519,6 +533,12 @@
                          color: $white-bg;
                          background: $color-7DC855;
                          border-color: transparent;
+
+                         &:hover {
+                              color: $white-bg;
+                              background: $color-358ED7;
+                              border-color: $color-358ED7;
+                         }
                     }
                }
           }
