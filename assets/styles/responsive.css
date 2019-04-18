@@ -1,0 +1,28 @@
+/*///////////////////////////////////////////////////////////////////////// Responsive CSS Structure /////////////////////////////////////////////////////////////////////////*/
+
+
+/*---------- Small Mobile , IPhone Start ----------*/
+
+/*=== Screen Size = 240, 320, 360, 480, 568 ===*/ 
+
+@media (min-width: 240px) and (max-width: 568px){
+}
+@media (min-width: 569px) and (max-width: 767px){
+
+}
+@media (max-width: 767px) {
+}
+
+@media (min-width: 768px) {
+}
+@media (min-width: 768px) and (max-width: 991px){
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+}
+@media (min-width: 1200px) and (max-width: 1920px){
+}
+
+
+
+/*---------- Large Desktop , Large Screen End ----------*/

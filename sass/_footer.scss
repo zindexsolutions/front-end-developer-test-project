@@ -1,0 +1,158 @@
+// Footer
+
+.footer {
+
+     background: $color-545E6B;
+     padding: 60px 0 90px;
+
+     &__left {
+
+          padding-right: 30px;
+          position: relative;
+          padding-left: 105px;
+
+          a {
+               position: absolute;
+               left: 0;
+               top: 0;
+               display: block;
+
+               // img {
+               //      width: 68px;
+               // }
+          }
+
+          p {
+               font-size: 16px;
+               line-height: 25px;
+               color: $white-bg;
+               opacity: 0.6;
+               margin: 0;
+          }
+     }
+
+     &__links {
+
+          
+          .block {
+               width: 30%;
+               float: left;
+               
+               .f-title {
+                    padding: 0 0 30px;
+
+                    h6 {
+                         font-weight: $medium;
+                         font-size: 18px;
+                         line-height: 18px;
+                         color: $white-bg;
+                         margin: 0;
+                    }
+               }
+
+               ul {
+
+                    display: block;
+                    padding: 0;
+                    margin: 0;
+                    list-style-type: none;
+
+                    li {
+                         list-style-type: none;
+                         padding: 0 0 20px;
+                         margin: 0;
+                         display: block;
+
+                         &:last-child {
+                              padding: 0;
+                         }
+
+                         a {
+                              display: block;
+                              padding: 0;
+                              text-decoration: none;
+                              font-size: 16px;
+                              line-height: 16px;
+                              color: rgba(255,255,255,.6);
+
+                              &:hover {
+                                   color: $color-39ADD1;
+                              }
+                         }    
+                    }
+               }
+          }
+     }
+
+     .selectbox {
+          display: inline-block;
+
+          .dropdown-toggle {
+               background: transparent;
+               border: none;
+               color: rgba(255,255,255,.6);
+               padding: 0;
+               font-size: 16px;
+               line-height: 16px;
+               text-transform: capitalize;
+
+               span {
+                    text-transform: uppercase;
+               }
+
+               &:after {
+                    display: none;
+               }
+
+               svg {
+                    &:first-child {
+
+                         margin-right: 5px;
+                    }
+
+                    &:last-child {
+                         margin-left: 5px;
+                    }
+               }
+          }
+
+          .dropdown-menu { 
+
+               background: $color-39ADD1;
+               @include border-radius(0);
+               border: none;
+               left: 0;
+               right: 0;
+               width: auto;
+               min-width: auto;
+               top: 15px !important;
+               padding: 0;
+               margin: 0;
+
+               .dropdown-item {
+
+                    color: $white-bg;
+                    padding: 6px 14px;
+                    text-align: center;
+
+                    &:focus,
+                    &:hover {
+                         background: transparent;
+                    }
+               }
+
+               &:after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: -10px;
+                    right: auto;
+                    border-left: 12px solid transparent;
+                    border-right: 12px solid transparent;
+                    border-bottom: 10px solid $color-39ADD1;
+                    left: 50%;
+                    @include transform(translate(-50%, 0));
+               }
+          }
+     }
+}

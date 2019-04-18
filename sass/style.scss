@@ -1,0 +1,661 @@
+
+// You can adjust the bootstrap variabled in this file
+@import "vars";
+
+// Mixins
+@import "mixins";
+
+// Bootstrap components use the same name as Bootstrap
+@import "custom_vars";
+
+// Commen Css
+@import "common";
+
+.svg-defs {
+     display: none;
+}
+
+
+@keyframes slide-down {
+     0% {
+          opacity: 0;
+          transform: translateY(-100%);
+     }
+
+     100% {
+          opacity: 0.9;
+          transform: translateY(0);
+     }
+}
+
+/****************** header start ***************/
+
+.header {
+     background: $white-bg;
+     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.0965523);
+     -webkit-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.0965523);
+     -moz-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.0965523);
+     -ms-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.0965523);
+     -o-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.0965523);
+     padding: 38px 0 40px;
+     @include transition(.4s);
+     // animation:slide-down 0.7s;
+     
+     // &.fixed {
+     //      position: fixed;
+     //      top: 0;
+     //      left: 0;
+     //      right: 0;
+     //      @include transition(.4s);
+     //      animation:slide-down 0.7s;
+     //      -webkit-animation:slide-down 0.7s;
+     //      -moz-animation:slide-down 0.7s;
+     //      -ms-animation:slide-down 0.7s;
+     //      -o-animation:slide-down 0.7s;
+     //      z-index: 999;
+     // }
+}
+
+.navbar {
+     padding: 0;
+
+     .navbar-brand {
+          padding: 0;
+          margin: 0 50px 0 0;
+          font-size: initial;
+
+          svg {
+               width: 122px;
+               height: 22px;
+          }
+     }
+}
+
+
+.navbar-nav {
+     
+     .nav-item {
+          padding: 0 20px;
+     }
+
+     .nav-link {
+          padding: 0 !important;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 16px;
+          color: $text-color;
+
+          &:hover {
+               color:$text-hover-color;
+          }
+     }      
+}
+
+/****************** header end ***************/
+
+/****************** feature section start ***************/
+
+.featured {
+     padding: 112px 0 130px;
+
+     &__title {
+          text-align: center;
+
+          h1,h2,h3,h4,h5,h6 {
+               font-weight: $light-300;
+               font-size: 52px;
+               line-height: 58px;
+               letter-spacing: -2px;
+               color: $color-43484D;
+               margin: 0 0 18px;
+          }
+     }
+
+     &__detail {
+
+          p {
+               font-weight: $light-300;
+               font-size: 22px;
+               line-height: 32px;
+               text-align: center;
+               color: $color-5E6977;
+               margin: 0;
+          }
+     }
+
+     &__img {
+
+          padding: 70px 0 60px;
+
+          img {
+               @include border-radius(10px);
+          }
+     }
+
+     .block {
+          position: relative;
+
+          &__icon {
+               position: absolute;
+               left: 0;
+               top: 0;
+          }
+
+          &__detail {
+
+               padding: 0 0 0 80px;
+
+               h2 {
+                    font-weight: $normal;
+                    font-size: 18px;
+                    line-height: 18px;
+                    margin: 0 0 10px;
+                    color: $color-43484D;
+               }
+
+               p {              
+                    font-weight: $normal;
+                    font-size: 16px;
+                    line-height: 25px;
+                    color: $text-color;
+                    margin: 0;
+               }
+          }
+     }
+
+}
+
+/****************** feature section end ***************/
+
+/****************** creatives section start ***************/
+
+.creatives {
+     // background: $color-F7F7F9;
+     margin: 65px 0 0;
+     position: relative;
+
+     .slider-div {
+
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          display: flex;
+          align-items: center;
+     }
+
+     .creative-slider {
+
+          opacity: 0;
+          padding-right: 200px;
+
+          &.slick-initialized {
+               opacity: 1;
+          }
+
+          &__item {
+
+               &--title {
+
+                    h3 {
+                         font-weight: $light-300;
+                         font-size: 32px;
+                         line-height: 32px;
+                         color: $color-43484D;
+                         margin: 0 0 20px;
+                    }
+               }
+
+               &--detail {
+
+                    p {
+                         // font-weight: $light-300;
+                         font-size: 16px;
+                         line-height: 25px;
+                         color: $text-color;
+                         margin: 0 0 20px;
+                    }
+
+                    a {
+                         font-weight: $medium;
+                         font-size: 16px;
+                         line-height: 16px;
+                         color: $color-358ED7;
+                         text-decoration: none;
+                         display: inline-block;
+                         margin: 0 0 35px;
+
+                         span {
+                              display: inline-block;
+                              vertical-align: middle;
+                              margin-right: 5px;
+                         }
+
+                         svg {
+                              display: inline-block;
+                              vertical-align: middle;
+                         }
+                    }
+               }
+          }
+
+          .slick-slide {
+               // padding-right: 200px;
+          }
+          
+          .slick-prev {
+               display: none !important;
+          }
+
+          .slick-next {
+               position: absolute;
+               top:50%;
+               left: auto;
+               right: 0;
+               @include transform(translate(0,-50%));
+               cursor: pointer;
+          }
+
+          .slick-dots {
+               margin: 0;
+               padding: 0;
+
+               li {
+                    display: inline-block;
+                    margin: 0 5px;
+                    padding: 0;
+                    position: relative;
+
+                    button {
+                         text-indent: -4000px;
+                         border: none;
+                         @include border-radius(50%);
+                         width: 6px;
+                         height: 6px;
+                         padding: 0;
+                         background: $text-color;
+                         background: $color-e7e9ec;
+                         font-size: 0;
+                         line-height: 0;
+                    }
+                    &.slick-active {
+                         button {
+                              height: 10px;
+                              width: 10px;
+                              background: $color-358ED7;
+                         }
+                    }
+               }
+          }           
+     }
+}
+
+/****************** creatives section end ***************/
+
+
+/****************** pricing section start ***************/
+
+.pricing {
+
+     padding: 112px 0 0;
+     background: $color-F9F9F9;
+
+     &__title {
+
+          h1,h2,h3,h4,h5,h6 {
+               font-weight: $light-300;
+               font-size: 52px;
+               line-height: 58px;
+               text-align: center;
+               letter-spacing: -2px;
+               color:$color-43484D;
+               margin: 0 0 20px;
+          }
+     }
+
+     &__detail {
+
+          p {
+               font-weight: $light-300;
+               font-size: 22px;
+               line-height: 32px;
+               text-align: center;
+               color: $color-5E6977;
+               margin: 0;
+          }
+     }
+}
+
+.pricing-table {
+
+     background: $white-bg;
+     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.0965523);
+     -webkit-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.0965523);
+     -moz-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.0965523);
+     -ms-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.0965523);
+     -o-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.0965523);
+     @include border-radius(6px);
+     margin: 90px 0 0;
+     position: relative;
+
+     [class*=col-]:first-child {
+          &__block {
+               padding: 50px;
+          }
+     }
+
+     &__block {
+
+          padding: 30px;
+
+          &--title {
+               text-align: center;
+               padding: 0 0 25px;
+
+               p {
+                    font-weight: $medium;
+                    font-size: 14px;
+                    line-height: 14px;
+                    text-align: center;
+                    letter-spacing: 1.3px;
+                    color: $color-358ED7;
+                    text-transform: $uppercase;
+                    margin: 0 0 4px;
+               }
+
+               span {
+                    font-size: 16px;
+                    line-height: 16px;
+                    color: $text-color;
+                    display: block;
+               }
+          }
+
+          &:nth-child(1) {
+               border-right: 1px solid $color-F9F9F9;
+          }
+          &--price-box {
+     
+               border-top: 1px solid $color-E1E8EE;
+               border-bottom: 1px solid $color-E1E8EE;
+               padding: 30px 0;
+     
+               span {
+                    font-weight: $light-300;
+                    font-size: 52px;
+                    line-height: 52px;
+                    text-align: center;
+                    letter-spacing: -2px;
+                    color: $color-43484D;
+                    display: block;
+                    margin: 0 0 6px;
+               }
+     
+               small {
+                    font-size: 14px;
+                    line-height: 14px;
+                    text-align: center;
+                    color: $text-color;
+                    display: block;
+                    margin: 0 0 30px;
+               }
+     
+               p {
+                    font-size: 16px;
+                    line-height: 25px;
+                    text-align: center;
+                    color: $text-color;
+                    margin: 0;
+               }
+          }
+     
+          &--feature {
+               padding: 30px 0 60px;
+     
+               ul {
+                    padding: 0;
+                    margin: 0;
+                    list-style-type: none;
+                    display: block;
+     
+                    li {
+                         position: relative;
+                         font-size: 14px;
+                         line-height: 15px;
+                         color: $text-color;
+                         margin: 0 0 35px;
+                         padding-left: 30px;
+     
+                         svg {
+                              position: absolute;
+                              left: 0;
+                              top: 0;
+                              fill: $color-7DC855;
+                         }
+     
+                         &.disable-feature {
+                              color: $color-BFC7CE;
+                         }
+     
+                         &:last-child {
+                              margin: 0;
+                         }
+     
+                    }
+               }
+          }
+     
+          &--btn {
+               
+               a {
+                    font-weight: $medium;
+                    font-size: 16px;
+                    line-height: 16px;
+                    text-align: center;
+                    color: $color-358ED7;
+                    padding: 10px 10px;
+                    border: 2px solid $color-E1E8EE;
+                    @include border-radius(6px);
+                    display: block;
+                    text-decoration: none;
+     
+                    &:hover {
+                         color: $white-bg;
+                         background: $color-358ED7;
+                         border-color: $color-358ED7;
+                    }
+     
+               }
+          }
+
+          &.premium {
+               // display: none;
+               background: $color-39ADD1;
+               border: none;
+               @include border-radius(0px 6px 6px 0px);
+
+               .title {
+
+                    p {
+                         color: $white-bg;
+                    }
+
+                    span {
+                         color: rgba(255,255,255,.6);
+                    }
+               }
+               .price-box {
+
+                    span {
+                         color: $white-bg;
+                    }
+
+                    small {
+                         color: rgba(255, 255, 255, .7);
+                    }
+
+                    p {                      
+                         color: rgba(255, 255, 255, .6);
+                    }
+                }
+
+               .feature {
+
+                    ul {
+
+                         li {
+                              color: $white-bg;
+
+                              svg {
+                                   fill: $color-86D35D;
+                              }
+                         }
+                    }
+               }
+
+               .btn-pre {
+                    a {
+                         color: $white-bg;
+                         background: $color-7DC855;
+                         border-color: transparent;
+                    }
+               }
+          }
+     }
+
+}
+
+
+
+.pricing-table-slider {
+
+     .slick-arrow {
+          position: absolute;
+          top: 50%;
+          @include transform(translate(0, -50%));
+          cursor: pointer;
+          z-index: 9;
+          background: $white-bg;
+          padding: 7px 5px;
+     }
+
+     .slick-next {
+          left: auto;
+          right: -20px;
+     }
+
+     .slick-prev {
+          left: -20px;
+          right: auto;
+          @include transform(translate(0, -50%) rotate(180deg));
+     }
+}
+
+
+/****************** pricing section end ***************/
+
+
+/****************** ultimate section start ***************/
+
+
+.ultimate {
+
+     background: $color-5E6977;
+     padding: 250px 0 110px;
+     margin-top: -130px;
+     text-align: center;
+
+     &__title {
+
+          h1,h2,h3,h4,h5,h6 {
+
+               font-weight: $light-300;
+               font-size: 52px;
+               line-height: 58px;
+               letter-spacing: -2px;
+               color: $white-bg;
+               margin: 0 0 25px;
+          }
+     }
+
+     &__detail {
+          padding: 0 0 45px;
+
+          p {
+               font-weight: $light-300;
+               font-size: 22px;
+               line-height: 32px;
+               color: rgba(255, 255, 255, .8);
+               margin: 0;
+          }
+     }
+
+     &__try-free {
+
+          text-align: center;
+
+          a {
+               font-family: Roboto;
+               font-style: normal;
+               font-weight: 500;
+               font-size: 16px;
+               line-height: 16px;
+               text-align: center;
+               background: $color-7DC855;
+               @include border-radius(6px);
+               padding: 20px 42px;
+               color: $white-bg;
+               display: inline-block;
+               text-decoration: none;
+
+               &:hover {
+                    background: $color-358ED7;
+               }
+          }
+     }
+}
+
+.clients {
+     padding: 80px 0 0;
+
+     p {
+          font-weight: $medium;
+          font-size: 18px;
+          line-height: 18px;
+          color: rgba(255, 255, 255, .6);
+          margin: 0 0 40px;
+     }
+
+     ul {
+          padding: 0;
+          margin: 0;
+          list-style-type: none;
+          display: block;
+
+          li {
+               display: inline-block;
+               padding: 0 25px;
+               margin: 0;
+               list-style-type: none;
+
+               svg {
+                    fill:$color-7e8792;
+               }
+          }
+     }
+}
+
+
+/****************** ultimate section end ***************/
+
+
+
+
+// Footer Css
+@import "footer";
+
+
+
+// Responsive Css
+@import "responsive";
